@@ -1,11 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-<<<<<<< HEAD
+
     "name": "bird-count-app"
-=======
-    "name": "components101"
->>>>>>> 10bc0cafe905e187fbc64d1531494f4b85d63b7f
+
   },
   "apps": [
     {

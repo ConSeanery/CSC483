@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
 import { DataService } from './data.service';
 import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
@@ -18,65 +17,10 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
     <li *ngIf="myArr; else otherTmpl">Yeah, I exist.</li>
   </ul>
   <ng-template #otherTmpl>No, I do.</ng-template>
-=======
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-	  angularLogo = 'https://angular.io/resources/images/logos/angular2/angular.png';
-  title = 'app';
-  myEvent(event) {
-    console.log(event);
-  }
-  
-  constructor(private dataService:DataService) {
-someProperty:string = '';
-
-  ngOnInit() {
-    console.log(this.dataService.cars);
-
-    this.someProperty = this.dataService.myData();
-  }
-  }
-  
-}
-
-
-export class DataService {
- constructor() { }
-
-  cars = [
-    'Ford','Chevrolet','Buick'
-  ];
-
-
-  myData() {
-    return 'This is my data, man!';
-  }
-  
-
-}
-
-@Component({
-		
-	
-// Other component properties removed
-  template: `
-  <h1>Hey guys!</h1>
-  <p>{{ myObject.gender }}</p>
-  
-  
-  
-  <h1>Hey guys!</h1>
->>>>>>> 10bc0cafe905e187fbc64d1531494f4b85d63b7f
   <div *ngIf="myArr; then tmpl1 else tmpl2"></div>
 
   <ng-template #tmpl1>I'm here</ng-template>
   <ng-template #tmpl2>I'm not here</ng-template>
-<<<<<<< HEAD
   <img src="{{ angularLogo }}">
   <button [disabled]="buttonStatus">My Button</button>
   <button [disabled]="buttonStatus == 'enabled'">My Button</button>
@@ -85,6 +29,7 @@ export class DataService {
   <p [@myAwesomeAnimation]='state' (click)="animateMe()">I will animate</p>
   
   `,
+  
   
   animations: [
     trigger('myAwesomeAnimation', [
@@ -103,31 +48,10 @@ export class DataService {
              ],
 
   //styleUrls: ['./app.component.css']
-=======
-  <h1>Hey guys!</h1>
-  <ul>
-    <li *ngIf="myArr; else otherTmpl">Yeah, I exist.</li>
-  </ul>
-
-  <ng-template #otherTmpl>No, I do.</ng-template>
-  
-  <button (click)="myEvent($event)">My Button</button>
-  
-  <p>{{ someProperty }}</p>
-  `,
-  
-
-})
-
-
-@Component({
-  // Other properties removed
->>>>>>> 10bc0cafe905e187fbc64d1531494f4b85d63b7f
   styles: [`
     h1 {
         text-decoration:underline;
     }
-<<<<<<< HEAD
 	p {
     width:200px;
     background:lightgray;
@@ -154,39 +78,10 @@ export class AppComponent {
     angularLogo = 'https://angular.io/resources/images/logos/angular2/angular.png';
  
  myObject = {
-=======
-`]
-})
-
-
-@Component({
-  selector: 'app-root',
-  template: `
-  <p>I will animate</p>
-  `,
-  styles: [``],
-  animations: [
-
-   // Define animations here.
-
-  ]
-  
-  animations: [
-    trigger('myAwesomeAnimation', [
-
-    ]),
-  ]
-})
-
-export class AppComponent {
-
-  myObject = {
->>>>>>> 10bc0cafe905e187fbc64d1531494f4b85d63b7f
     gender: 'male',
     age: 33,
     location: 'USA'
   };
-<<<<<<< HEAD
  
  myArr = ['him','hers','yours','theirs'];
 	myEvent(event) {
@@ -198,14 +93,13 @@ export class AppComponent {
   }
 
   
-  someProperty:string = '';
+ someProperty:string[] = [];
 
   ngOnInit() {
     console.log(this.dataService.cars);
 
-    this.someProperty = this.dataService.myData();
+    //this.someProperty = this.dataService.myData();
+	this.someProperty = this.dataService.cars;
+	
   }
-=======
-
->>>>>>> 10bc0cafe905e187fbc64d1531494f4b85d63b7f
 }
