@@ -28,6 +28,18 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
   <p>{{ someProperty }}</p>
   <p [@myAwesomeAnimation]='state' (click)="animateMe()">I will animate</p>
   
+  
+  
+  <h1>Get and Post Functions</h1>
+	<form id="createPostForm" method="POST" class="form-horizontal">
+    <a href="https://samandercfunction.azurewebsites.net/api/JavaScript_POST_CSC483?code=vj4IF7qOYeauJDTVDQbBvU/4fCHdoXLvxjAzl3tb9ktww7s7pa5aVg==&name={{name}}">Post (Use Postman)</a>							 
+	</form>
+	<a href="https://samandercfunction.azurewebsites.net/api/JavaScript_GET_CSC483?code=EYZj6xbSys3LjOio8Qvjm02bfc7mwCyja2ZklQD8BRo51t19TofgXA==">Get</a>
+								
+  
+  
+  
+  
   `,
   
   
@@ -66,12 +78,17 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
  
 export class AppComponent {
 	
+	
+	
+	
+	
 	state: string = 'small';
 
   animateMe() {
         this.state = (this.state === 'small' ? 'large' : 'small');
   }
-  
+   
+	name = "Sam";
 	titleStyle = 'red';
 	buttonStatus = 'enabled';
     title = 'app works!';
@@ -88,6 +105,8 @@ export class AppComponent {
     console.log(event);
   }
   
+  
+  
   constructor(private dataService:DataService) {
 	  
   }
@@ -96,6 +115,9 @@ export class AppComponent {
  someProperty:string[] = [];
 
   ngOnInit() {
+	  
+	  
+	  
     console.log(this.dataService.cars);
 
     //this.someProperty = this.dataService.myData();
